@@ -1,15 +1,9 @@
 from zodb.db import JogoDB
 from zodb.modelos import Jogo
-from mongo.connect import get_mongo_db
-from mongo.comentario import novo_comentario
-# 
 from time import sleep
 from typing import Literal
-
-# === Setup dos bancos ===
+# === Setup dos banco ===
 zodb = JogoDB()  # Instancia o banco ZODB para jogos e usuários
-db_mongo = get_mongo_db()  # Instancia o banco MongoDB para comentários
-comentarios = db_mongo["comentarios"]  # Coleção de comentários
 
 # === Funções de cores para terminal ===2
 
